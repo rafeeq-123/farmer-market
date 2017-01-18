@@ -24,19 +24,20 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <li class="" >
-                      <%if user_signed_in?%>
-                        <a <%= link_to "Logout", destroy_user_session_path, :style =>"color:black", method: :delete, :class => "page-scroll"%></a>  
-                          <%else%>
-                            </li>
-                              <li class="">
-                                <a <%= link_to "Login", user_session_path, :style =>"color:black", :class => "page-scroll"%> </a>  
-                              </li>
-                           <%end%>
-
-        
-                  </ul>
-                </div>
+                  <li class="" >
+                    <%if user_signed_in?%>
+                      <a <%= link_to "Logout", destroy_user_session_path, :style =>"color:black", method: :delete, :class => "page-scroll"%></a>  
+                            <%else%>
+                          </li>
+                        <li class="">
+                      <a <%= link_to "Login", user_session_path, :style =>"color:black", :class => "page-scroll"%> </a>  
+                    </li>
+                  <%end%>
+                <li class="">                              
+              <a <%= link_to "Home", welcome_index_path, :style =>"color:black", :class => "page-scroll"%></a>  
+            </li>
+          </ul>
+            </div>
               <div class="row">
                  <div class="col-xs-10 col-xs-offset-1">
                       <% flash.each do |alert_type, msg| %>
