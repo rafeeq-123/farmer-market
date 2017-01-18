@@ -13,7 +13,7 @@
   <body cz-shortcut-listen="true">
 
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <!-- <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -34,17 +34,60 @@
             </li>
             <li>
                 <a href="#contact" onclick="$(&quot;#menu-close&quot;).click();">Contact</a>
-            </li>
-        </ul>
+            </li> -->
+     <!--    </ul>
     </nav>
+ -->
+ <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                      </button>
+                       <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light" style="color:black">The Farmer Market</span> 
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="#">Does this work?</a>  
+                          </li>
+                            <li class="">
 
+                            <!-- add more links here! -->
+                  </ul>
+                </div>
+              <div class="row">
+                 <div class="col-xs-10 col-xs-offset-1">
+                      <% flash.each do |alert_type, msg| %>
+                          <% if alert_type == "notice" %>
+                             <div class="alert alert-success">
+                                <% elsif alert_type == "alert" %>
+                                  <div class="alert alert-danger">
+                                    <% else %>
+                               <div class="alert-dismissible<%= "#{alert_type}"%>" >
+                              <% end %>
+                           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <ul>
+                      <li>
+                   <%= msg %>
+                 </li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+     <!-- /.container -->
+    </nav>
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Start Bootstrap</h1>
-            <h3>Free Bootstrap Themes &amp; Templates</h3>
+            <h1>The Farmer Market</h1>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
         </div>
     </header>
 
@@ -54,7 +97,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    
                 </div>
             </div>
             <!-- /.row -->
@@ -139,67 +182,6 @@
             <h1>Vertically Centered Text</h1>
         </div>
     </aside>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Call to Action -->
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -207,18 +189,19 @@
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <h4><strong>Farmer Market</strong>
                     </h4>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">name@example.com</a>
+                    <p>
+                      San Francisco
+                      <br>123 lane
+                    </p>
+                    <ul class="list-unstyled">      
+                        <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:rafeeqwilson914@gmail.com">rafeeqwilson914@gmail.com</a>
                         </li>
                     </ul>
                     <br>
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                            <a href="#"><i class="fa fa-github fa-fw fa-3x"></i></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
