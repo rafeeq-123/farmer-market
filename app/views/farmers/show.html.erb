@@ -1,5 +1,11 @@
-<%=@farmer.farmer_market_name%>
-<%=@farmer.schedule%>
-<%=@farmer.speciality%>
-<%=@farmer.price_range%>
+<div class="text-center">
+<h1><%=@farmer.farmer_market_name%></h1>
+
 <%= image_tag @farmer.avatar.url(:square)%>
+<h2><%=@farmer.schedule%></h2>
+<h2><%=@farmer.speciality%></h2>
+<h2><%=@farmer.price_range%></h2>
+</div>
+
+
+
