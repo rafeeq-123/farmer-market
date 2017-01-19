@@ -29,7 +29,8 @@ class FarmersController < ApplicationController
 
   def show
     @farmer = Farmer.find(params[:id])
-  end
+  end  
+  
   private
 
   def farmer_params
