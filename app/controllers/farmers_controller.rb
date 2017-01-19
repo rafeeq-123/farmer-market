@@ -28,9 +28,8 @@ class FarmersController < ApplicationController
   end
 
   def show
-    @farm = Farm.find(params[:id])
+    @farmer = Farmer.find(params[:id])
   end
-
   private
 
   def farmer_params
