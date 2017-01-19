@@ -1,16 +1,1 @@
-  <div class="text-center">
-  <%= form_for @farmer, :html => {:multipart => true} do |f| %>
-  <%= f.label :farmer_market_name%>
-  <%= f.text_field :farmer_market_name%>
-  <%=f.label :schedule%>
-  <%=f.text_field :schedule%>
-  <%=f.label :avatar, "Main picture"%>
-  <%=f.file_field :avatar %> 
-  <%=f.label :speciality%>
-  <%=f.text_area :speciality%>
-  <%=f.label :price_range%>
-  <%=f.text_field :price_range%>
-  <%=f.submit "Creat"%>
-  <%end%>
-
-</div>
+<%=render"farmers/form"%>

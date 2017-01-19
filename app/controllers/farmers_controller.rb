@@ -12,6 +12,7 @@ class FarmersController < ApplicationController
   end
 
   def create
+    # binding.pry
     @farmer = current_user.farmers.new(farmer_params)
     respond_to do |format|
     if @farmer.save
@@ -26,10 +27,14 @@ class FarmersController < ApplicationController
     end
   end
 
+  def show
+    @farm = Farm.find(params[:id])
+  end
+
   private
 
   def farmer_params
-    params.require(:farmer).permit(:farmer_market_name, :schedule, :price_range)
+    params.require(:farmer).permit(:farmer_market_name, :speciality, :schedule, :price_range, :avatar) 
   end
 
 end

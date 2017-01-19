@@ -1,1 +1,2 @@
-index.html.erb
+<%=farmer_url(farmer.id), {style: "color: black"}%>
+  <%= link_to image_tag(farmer.avatar.url(:thumb).to_s, :class => "hover"), farmer_url(farmer.id), title:farmer.farmer_market_name %>
