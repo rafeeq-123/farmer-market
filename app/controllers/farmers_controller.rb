@@ -3,6 +3,9 @@ class FarmersController < ApplicationController
   def weather
   end
 
+  def dollars
+  end
+
   def index
     @farmers = Farmer.all
   end 
@@ -30,7 +33,7 @@ class FarmersController < ApplicationController
   def show
     @farmer = Farmer.find(params[:id])
   end  
-  
+
   private
 
   def farmer_params
