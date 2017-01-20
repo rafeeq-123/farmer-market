@@ -1,5 +1,6 @@
   <div class="text-center">
-  <%= form_for @farmer, :html => {:multipart => true} do |f| %>
+  <h1>Create a Market</h1>
+  <%= form_for @farmer, :multipart => true do |f| %>
   <div>
   <%= f.label :farmer_market_name%>
   <%= f.text_field :farmer_market_name, class:"form-control"%>
@@ -7,11 +8,10 @@
 
   <div >
   <%=f.label :schedule%>
-  <%=f.text_field :schedule, class:"form-control sm"%>
+  <%=f.text_field :schedule, class:"form-control"%>
   </div>
 
   <div>
-  <%=f.label :avatar, "Main picture"%>
   <%=f.file_field :avatar, class:"form-control" %> 
   </div>
 
