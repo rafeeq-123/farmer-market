@@ -18,7 +18,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'omniauth', '~> 1.3', '>= 1.3.1'
-gem 'paperclip','~> 5.0'
+gem 'paperclip','~> 5.0.0'
 gem 'aws-sdk', '~> 2.6', '>= 2.6.44'
 gem 'pry'
 
