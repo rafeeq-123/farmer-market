@@ -1,11 +1,6 @@
-<% @farmers.each do |farmer| %>
-
-       <div class="col-md-3 col-sm-6">       
-          <span class="fa-stack fa-4x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-cloud fa-stack-1x text-primary text-center"></i>
-                <%= link_to image_tag(farmer.avatar.url(:medium).to_s, :class => "hover"), farmer_url(farmer.id), title:farmer.farmer_market_name %>
-              </div>
-         
-    <%end%>
-   <!--  <div class="table-cell"> -->
+<% @farmers.each do |farmer| %> 
+  <div class="square">
+    <%= link_to image_tag(farmer.avatar.url(:medium).to_s, :class => "hover"), farmer_url(farmer.id), title:farmer.farmer_market_name %>
+      </div>
+     </div>  
+     <%end%>
