@@ -1,5 +1,5 @@
 class Farmer < ApplicationRecord
-  # attr_accessor :avatar_file_name
+  attr_accessor :avatar_file_name
   belongs_to :user
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
