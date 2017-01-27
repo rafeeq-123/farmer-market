@@ -11,6 +11,8 @@ module FarmersHelper
       "$$$" 
     elsif range.include?(50..ranged_num[1])
       "$$$$" 
+    else
+      @farmer.price_range
     end
   end          
 end
